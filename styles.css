@@ -17,3 +17,25 @@ footer{border-top:1px solid var(--line);padding:24px 0 35px;display:flex;justify
 .notify-overlay{display:none;position:fixed;inset:0;background:rgba(6,10,14,.78);backdrop-filter:blur(7px);z-index:50;align-items:center;justify-content:center;padding:20px}.notify-overlay.open{display:flex}.modal{width:min(500px,100%);background:#182735;border:1px solid var(--line);padding:30px}.modal h2{margin-top:0;font-size:28px}.modal p{color:var(--muted)}.modal input{width:100%;padding:14px;background:#101923;border:1px solid var(--line);color:var(--text);margin:12px 0;font:14px Inter}.modal-actions{display:flex;gap:10px}
 @media(max-width:850px){.container{width:min(calc(100% - 32px),var(--max))}.nav{gap:15px;font-size:9px}.hero{padding-top:55px}.hero-grid,.course-hero,.content-grid{grid-template-columns:1fr;gap:40px}.purchase{position:static}.course-grid{grid-template-columns:1fr 1fr}.history-row{grid-template-columns:1fr}.split{grid-template-columns:1fr;gap:25px}}
 @media(max-width:560px){.course-grid{grid-template-columns:1fr}.navbar{min-height:68px}.brand{font-size:14px}.nav{gap:10px}.nav a:nth-child(1){display:none}.hero-copy h1{font-size:48px}.lead{font-size:18px}.contact-row{font-size:9px}.history-row{padding:20px 0}.course-facts{gap:22px;flex-wrap:wrap}.content-grid{margin-top:55px}.page{padding-top:50px}footer{display:block}.container+footer{padding-top:24px}.btn{width:auto}}
+
+/* NEXORA visual refinement v2 */
+:root{--bg:#050706;--panel:#0b110d;--text:#f5f7f4;--muted:#a9b1aa;--line:rgba(230,242,232,.20);--lime:#A7FF3F;--max:1180px}
+body{background:radial-gradient(circle at 8% 0%,rgba(91,255,50,.075) 0%,rgba(40,120,55,.035) 18%,rgba(5,7,6,0) 42%),linear-gradient(180deg,#050706 0%,#060907 55%,#050706 100%);color:var(--text)}
+header{background:rgba(5,7,6,.86)}
+.brand{font-weight:800;display:flex;align-items:center;gap:0;letter-spacing:-.045em}.brand span{color:var(--lime);margin:0 8px;font-size:.72em}.brand em{font-family:Inter,Arial,sans-serif;font-style:normal;font-weight:300;letter-spacing:-.035em;color:#d8ded9}
+.card{background:linear-gradient(145deg,rgba(13,22,16,.96),rgba(8,13,10,.96));border-color:rgba(210,235,216,.17)}
+.card:hover{border-color:rgba(167,255,63,.65)}
+.purchase{background:rgba(10,16,12,.9)}
+.modal{background:#0a100c}
+.course-content{margin-top:85px}
+.about-block{max-width:900px;margin-bottom:70px}
+.course-info-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:90px;row-gap:8px}
+.course-info-grid .block{margin-bottom:58px}
+.course-info-grid .block p{max-width:520px}
+.course-info-grid .block h3{font-size:22px;margin:0 0 8px}
+.curriculum{margin-top:20px}
+.more-courses{margin-top:45px}
+.more-courses .section-head{margin-bottom:30px}
+.more-courses .course-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:850px){.course-info-grid{grid-template-columns:1fr;column-gap:0}.more-courses .course-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.course-info-grid{display:block}.more-courses .course-grid{grid-template-columns:1fr}.course-content{margin-top:55px}.about-block{margin-bottom:45px}.course-info-grid .block{margin-bottom:42px}}

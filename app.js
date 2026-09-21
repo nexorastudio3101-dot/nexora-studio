@@ -58,23 +58,17 @@ function renderCourse(){
       </div>
     </aside>
   </div>
-  <div class="content-grid">
-    <div>
-      <section class="block"><h2>ABOUT THIS COURSE</h2><p>${c.description}</p></section>
-      <div class="split">
-        <section class="block"><h2>WHAT YOU'LL LEARN</h2><ul class="checklist">${c.learn.map(x=>`<li>${x}</li>`).join("")}</ul></section>
-        <div>
-          <section class="block"><h2>WHO THIS IS FOR</h2><ul class="plain-list">${c.who.map(x=>`<li>${x}</li>`).join("")}</ul></section>
-          <section class="block"><h2>WHAT YOU NEED</h2><ul class="plain-list">${c.needs.map(x=>`<li>${x}</li>`).join("")}</ul></section>
-          <section class="block"><h2>TAUGHT BY</h2><h3>NEXORA Studio</h3><p>A digital media and education studio covering artificial intelligence, AI agents, productivity, careers and digital skills — for curious people without a technical background.</p></section>
-        </div>
-      </div>
-      <section class="block curriculum"><h2>CURRICULUM</h2>${c.curriculum.map((m,i)=>`<div class="module"><div class="module-title">${String(i+1).padStart(2,"0")} — ${m.title}</div><ul>${m.lessons.map(l=>`<li>${l}</li>`).join("")}</ul></div>`).join("")}</section>
-      <section class="block faq"><h2>FAQ</h2>${c.faq.map((f,i)=>`<div class="faq-item"><button type="button"><span>${f[0]}</span><span class="plus">+</span></button><div class="answer">${f[1]}</div></div>`).join("")}</section>
+  <div class="course-content">
+    <section class="block about-block"><h2>ABOUT THIS COURSE</h2><p>${c.description}</p></section>
+    <div class="course-info-grid">
+      <section class="block"><h2>WHAT YOU'LL LEARN</h2><ul class="checklist">${c.learn.map(x=>`<li>${x}</li>`).join("")}</ul></section>
+      <section class="block"><h2>WHO THIS IS FOR</h2><ul class="plain-list">${c.who.map(x=>`<li>${x}</li>`).join("")}</ul></section>
+      <section class="block"><h2>WHAT YOU NEED</h2><ul class="plain-list">${c.needs.map(x=>`<li>${x}</li>`).join("")}</ul></section>
+      <section class="block"><h2>TAUGHT BY</h2><h3>NEXORA Studio</h3><p>A digital media and education studio covering artificial intelligence, AI agents, productivity, careers and digital skills — for curious people without a technical background.</p></section>
     </div>
-    <aside>
-      <section class="block"><h2>MORE COURSES</h2><div>${courses.filter(x=>x.slug!==c.slug).slice(0,2).map(x=>`<a class="card" style="display:block;margin-bottom:12px" href="course.html?slug=${x.slug}"><div class="card-body"><div class="eyebrow">${x.category}</div><h3>${x.title}</h3><div class="card-bottom"><span class="price">${x.price}</span><span class="view">VIEW ↗</span></div></div></a>`).join("")}</div></section>
-    </aside>
+    <section class="block curriculum"><h2>CURRICULUM</h2>${c.curriculum.map((m,i)=>`<div class="module"><div class="module-title">${String(i+1).padStart(2,"0")} — ${m.title}</div><ul>${m.lessons.map(l=>`<li>${l}</li>`).join("")}</ul></div>`).join("")}</section>
+    <section class="block faq"><h2>FAQ</h2>${c.faq.map((f,i)=>`<div class="faq-item"><button type="button"><span>${f[0]}</span><span class="plus">+</span></button><div class="answer">${f[1]}</div></div>`).join("")}</section>
+    <section class="block more-courses"><div class="section-head"><h2>MORE COURSES</h2><a class="link-lime" href="courses.html">ALL COURSES ↗</a></div><div class="course-grid">${courses.filter(x=>x.slug!==c.slug).slice(0,3).map(courseCard).join("")}</div></section>
   </div>`;
   document.querySelectorAll(".faq-item button").forEach(btn=>btn.addEventListener("click",()=>btn.parentElement.classList.toggle("open")));
   document.querySelectorAll(".notify-trigger").forEach(btn=>btn.addEventListener("click",()=>document.getElementById("notify-modal").classList.add("open")));
