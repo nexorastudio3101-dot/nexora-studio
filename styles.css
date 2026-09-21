@@ -39,3 +39,14 @@ header{background:rgba(5,7,6,.86)}
 .more-courses .course-grid{grid-template-columns:repeat(3,1fr)}
 @media(max-width:850px){.course-info-grid{grid-template-columns:1fr;column-gap:0}.more-courses .course-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.course-info-grid{display:block}.more-courses .course-grid{grid-template-columns:1fr}.course-content{margin-top:55px}.about-block{margin-bottom:45px}.course-info-grid .block{margin-bottom:42px}}
+
+/* Interaction states: NEXORA lime active/selected text */
+.nav a:hover,.nav a.active,.nav a:focus-visible{color:var(--lime)}
+.faq button:hover,.faq button:focus-visible,.faq .open>button{color:var(--lime)}
+.faq .open .plus{color:var(--lime)}
+.filter:hover,.filter.active,.filter:focus-visible{background:transparent;color:var(--lime);border-color:var(--lime)}
+.contact-row a:hover,.contact-row a:focus-visible,.link-lime:hover,.link-lime:focus-visible,.view:hover,.view:focus-visible{color:var(--lime)}
+.btn:not(.primary):hover,.btn:not(.primary):focus-visible{color:var(--lime);border-color:var(--lime)}
+.card a:focus-visible,.card:focus-within{outline:1px solid var(--lime);outline-offset:3px}
+button:focus-visible,a:focus-visible{outline:1px solid var(--lime);outline-offset:3px}
+
